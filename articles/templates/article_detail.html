@@ -1,0 +1,24 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <div class="article-detail">
+    <div class="article">
+        <div class="article-title">
+            <h2 class="">{{ article.title }}</h2>
+        </div>
+      <hr id="underline1">
+        <div class="article-thumbnail">
+            <img class="blogimage img-responsive center-block thumbnail " src="{{ article.thumb.url }}">
+        </div>
+        <div class="article-body">
+            <p class="text-justify">{{ article.body }}</p>
+        </div>
+        <div class="article-date">
+            <p> {{ article.date }}</p>
+        </div>
+        <div class="article-author">
+            <p class="author"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;WrittenBy:&nbsp;&nbsp;&nbsp;{{ article.author }}</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}
